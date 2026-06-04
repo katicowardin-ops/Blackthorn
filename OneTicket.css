@@ -1,17 +1,57 @@
-.event-name.ng-star-inserted {   text-align: left !important; }
- 
-/* Stable page background */ html, body, .event-details.simple, .event-details.simple .container {   background-color: #cac3bc !important; }
- 
-/* Avoid globally changing every Blackthorn container */ .event-details.simple .container {   background: #cac3bc !important; }
- 
-.line, .dot {   display: none !important; }
- 
-/* Left-align event name/date area */ .event-details .event-where-when {   display: flex !important;   flex-flow: column wrap !important;   justify-content: flex-start !important;   align-items: flex-start !important;   text-align: left !important;   gap: 1rem 2rem !important;   padding-top: 1.125rem !important;   width: 100% !important;   box-sizing: border-box !important; }
- 
-/* Left-align date */ .event-date {   display: flex !important;   justify-content: flex-start !important;   align-items: center !important;   text-align: left !important;   width: 100% !important;   box-sizing: border-box !important; }
- 
-/* Prevent overflow/wrapping issues */ .event-name.ng-star-inserted, .event-date.ng-star-inserted {   flex: 0 1 auto !important;   min-width: 0 !important;   white-space: normal !important;   margin: 0 !important;   padding: 0 !important;   text-align: left !important; }
- 
-/* Mobile */ @media (max-width: 640px) {   .event-details .event-where-when,   .event-name.ng-star-inserted,   .event-date.ng-star-inserted {     align-items: flex-start !important;     justify-content: flex-start !important;     width: 100% !important;   } }
- 
-.actions.ng-star-inserted {   visibility: hidden !important; }
+.event-name.ng-star-inserted {
+  text-align: left !important;
+}
+ 
+/* Keep the beige background only on the event page */
+.event-details.simple,
+.event-details.simple .container {
+  background-color: #cac3BC !important;
+}
+ 
+/* Remove divider elements */
+.line,
+.dot {
+  display: none !important;
+}
+ 
+/* Left-align event details */
+.event-details .event-where-when {
+  display: flex !important;
+  flex-flow: column wrap !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  gap: 1rem 2rem !important;
+  padding-top: 1.125rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+ 
+.event-date {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+ 
+.event-name.ng-star-inserted,
+.event-date.ng-star-inserted {
+  min-width: 0 !important;
+  white-space: normal !important;
+  text-align: left !important;
+}
+ 
+@media (max-width: 640px) {
+  .event-details .event-where-when,
+  .event-name.ng-star-inserted,
+  .event-date.ng-star-inserted {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+}
+ 
+.actions.ng-star-inserted {
+  visibility: hidden !important;
+}
