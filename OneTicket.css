@@ -1,11 +1,17 @@
+/* Event title */
 .event-name.ng-star-inserted {
   text-align: left !important;
 }
  
-/* Keep the beige background only on the event page */
+/* Full page background */
+html,
+body,
+app-root,
 .event-details.simple,
-.event-details.simple .container {
-  background-color: #cac3BC !important;
+.event-details.simple .container,
+.content,
+.main-content {
+  background-color: #CAC3BC !important;
 }
  
 /* Remove divider elements */
@@ -14,7 +20,13 @@
   display: none !important;
 }
  
-/* Left-align event details */
+/* Extra protection against horizontal dividers */
+hr {
+  display: none !important;
+  border: none !important;
+}
+ 
+/* Left-align event details section */
 .event-details .event-where-when {
   display: flex !important;
   flex-flow: column wrap !important;
@@ -27,21 +39,28 @@
   box-sizing: border-box !important;
 }
  
+/* Left-align date */
 .event-date {
   display: flex !important;
   justify-content: flex-start !important;
   align-items: center !important;
   text-align: left !important;
   width: 100% !important;
+  box-sizing: border-box !important;
 }
  
+/* Prevent overflow and maintain left alignment */
 .event-name.ng-star-inserted,
 .event-date.ng-star-inserted {
+  flex: 0 1 auto !important;
   min-width: 0 !important;
   white-space: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
   text-align: left !important;
 }
  
+/* Mobile */
 @media (max-width: 640px) {
   .event-details .event-where-when,
   .event-name.ng-star-inserted,
@@ -52,6 +71,7 @@
   }
 }
  
+/* Hide action buttons */
 .actions.ng-star-inserted {
-  visibility: hidden !important;
+  display: none !important;
 }
