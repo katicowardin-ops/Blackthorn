@@ -1,0 +1,106 @@
+
+/* =========================================
+   AVENUES BLACKTHORN EVENT STYLING
+   ========================================= */
+ 
+/* 1. Full page background */
+html,
+body,
+app-root,
+.event-details.simple {
+  background-color: #CAC3BC !important;
+}
+ 
+/* Keep inner content transparent */
+.event-details.simple .container,
+.event-details.simple .content,
+.event-details.simple .main-content {
+  background-color: transparent !important;
+}
+ 
+/* 2. Remove gray backgrounds behind form labels */
+label,
+label span,
+.form-field label,
+.mat-mdc-form-field-label,
+.mat-form-field-label {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+ 
+/* Remove highlights from text inside labels */
+label *,
+.form-field label * {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+ 
+/* Keep input fields white */
+input,
+textarea,
+select {
+  background-color: #FFFFFF !important;
+}
+ 
+/* 3. Event title */
+.event-name.ng-star-inserted {
+  text-align: left !important;
+}
+ 
+/* 4. Remove blue divider line and dots */
+.line,
+.dot,
+hr {
+  display: none !important;
+  border: none !important;
+}
+ 
+/* 5. Left-align event name and date */
+.event-details .event-where-when {
+  display: flex !important;
+  flex-flow: column wrap !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  gap: 1rem 2rem !important;
+  padding-top: 1.125rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+ 
+/* 6. Left-align event date */
+.event-date {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  text-align: left !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+ 
+/* 7. Prevent overflow and maintain alignment */
+.event-name.ng-star-inserted,
+.event-date.ng-star-inserted {
+  flex: 0 1 auto !important;
+  min-width: 0 !important;
+  white-space: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+ 
+/* 8. Mobile formatting */
+@media (max-width: 640px) {
+  .event-details .event-where-when,
+  .event-name.ng-star-inserted,
+  .event-date.ng-star-inserted {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+}
+ 
+/* 9. Hide event action buttons */
+.actions.ng-star-inserted {
+  display: none !important;
+}
